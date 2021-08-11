@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+# це тут написано щоб гіт не слідкував за ними і не пропонувалися для пушу
+/.idea
+package-lock.json
+
 # testing
 /coverage
 

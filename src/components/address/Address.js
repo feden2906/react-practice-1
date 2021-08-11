@@ -1,13 +1,15 @@
 import Geo from "../geo/Geo";
 
-export default function Address({address: street, suite, city, zipcode, geo}) {
+export default function Address({street, suite, city, zipcode, geo}) {
     return (
         <div>
-            <h4>Address:</h4>
-            <p>Street - {street}, suite - {suite}</p>
-            <p>City: {city}</p>
-            <p>Zipcode: {zipcode}</p>
-            <Geo geo={geo}/>
+          Address:
+          <ul>
+            <li>Street - {street}, suite - {suite}</li>
+            <li>City: {city}</li>
+            <li>Zipcode: {zipcode}</li>
+            <Geo {...geo}/>
+          </ul>
         </div>
     );
 }
