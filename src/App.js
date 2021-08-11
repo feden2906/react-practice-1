@@ -1,7 +1,7 @@
 import './App.css'
-import User from "./components/users/User";
-import Address from "./components/users/Address";
-import Geo from "./components/users/Geo";
+import User from "./components/user/User";
+import Address from "./components/address/Address";
+import Geo from "./components/geo/Geo";
 
 export default function App() {
     return (
