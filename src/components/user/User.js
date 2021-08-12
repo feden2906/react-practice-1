@@ -16,7 +16,7 @@ let [comments, setComments] = useState ([]);
 
     return (
         <div>
-            <h2>{userItem.id} {userItem.name}</h2>
+            <h2>{userItem}</h2>
             <Posts items={posts}/>
             <Comments items= {comments}/>
         </div>
