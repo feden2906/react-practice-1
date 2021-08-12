@@ -16,6 +16,17 @@ let [comments, setComments] = useState ([]);
 
     return (
         <div>
+            {/*<User {...userItem[0]}/>*/}
+            {/*<User {...userItem[1]}/>*/}
+            {/*<User {...userItem[2]}/>*/}
+            {/*<User {...userItem[3]}/>*/}
+            {/*<User {...userItem[4]}/>*/}
+            {/*<User {...userItem[5]}/>*/}
+            {/*<User {...userItem[6]}/>*/}
+            {/*<User {...userItem[7]}/>*/}
+            {/*<User {...userItem[8]}/>*/}
+            {/*<User {...userItem[9]}/>*/}
+
             <h2>{userItem}</h2>
             <Posts items={posts}/>
             <Comments items= {comments}/>
