@@ -9,7 +9,7 @@ export default function Users() {
   })
   return (
     <div>
-      {users.map((userItem, index) => <User key={userItem.id} item = {userItem}/>)}
+      {users.map(userItem => <User key={userItem.id} item={userItem}/>)}
     </div>
   );
 }

@@ -8,7 +8,7 @@ export default function User({item: userItem}) {
     useEffect(() => {
         getPostsOfUser(userItem.id).then(({value}) => setPosts([...value]));
     }, [userItem.id]);
-let [comments, setComments] = useState ([]);
+    let [comments, setComments] = useState([]);
     useEffect(() => {
         getCommentsOfUser(userItem.id).then(({value}) => setComments([...value]));
     }, [userItem.id]);
@@ -29,7 +29,7 @@ let [comments, setComments] = useState ([]);
 
             <h2>{userItem}</h2>
             <Posts items={posts}/>
-            <Comments items= {comments}/>
+            <Comments items={comments}/>
         </div>
     );
 }
