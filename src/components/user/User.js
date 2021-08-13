@@ -1,18 +1,9 @@
 import {useEffect, useState} from "react";
 import Posts from "../posts/Posts";
-import {getCommentsOfUser, getPostsOfUser} from "../../services/user.service";
+import {getCommentsOfPost, getPostsOfUser} from "../../services/user.service";
 import Comments from "../comments/Comments";
 
-export default function User({item: userItem}) {
-    let [posts, setPosts] = useState([]);
-    useEffect(() => {
-        getPostsOfUser(userItem.id).then(({value}) => setPosts([...value]));
-    }, [userItem.id]);
-    let [comments, setComments] = useState([]);
-    useEffect(() => {
-        getCommentsOfUser(userItem.id).then(({value}) => setComments([...value]));
-    }, [userItem.id]);
-
+export default function User({item}) {
 
     return (
         <div>
@@ -27,9 +18,8 @@ export default function User({item: userItem}) {
             {/*<User {...userItem[8]}/>*/}
             {/*<User {...userItem[9]}/>*/}
 
-            <h2>{userItem}</h2>
-            <Posts items={posts}/>
-            <Comments items={comments}/>
+            <h1>{item.id} - {item.name} - {item.userName}</h1>
+            <Posts id={item.id}/>
         </div>
     );
 }

@@ -1,15 +1,17 @@
-let url = 'https://jsonplaceholder.typicode.com/users';
+let url = 'https://jsonplaceholder.typicode.com/';
+
 function getUsers ()  {
-    return fetch (url)
+    return fetch (url + 'users')
         .then (value => value.json());
 }
 
 function getPostsOfUser (id) {
-    return fetch(url + '/' + id)
-        .then(value => value.json())}
-
-function getCommentsOfUser (id) {
-    return fetch(url + '/' + id)
+    return fetch(url + 'users/' + id + '/posts')
         .then(value => value.json())
 }
-export {getUsers, getPostsOfUser, getCommentsOfUser}
+
+function getCommentsOfPost (id) {
+    return fetch(url + 'posts/' + id + '/comments')
+        .then(value => value.json())
+}
+export {getUsers, getPostsOfUser, getCommentsOfPost}
